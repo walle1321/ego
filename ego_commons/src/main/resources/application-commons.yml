@@ -1,0 +1,28 @@
+ego:
+  fastdfs:
+    nginx: http://192.168.8.129:8888/
+  bigad:
+    categoryid: 89
+  rabbitmq:
+    content:
+      queueName: content
+      host: http://localhost:8082/bigad
+    item:
+      insert: insertitem
+      host: http://localhost:8083/insert
+      delete: deleteitem
+      deletehost: http://localhost:8083/delete
+    creatOrder:
+      queueName: creatOrder
+    cart:
+      deleteQueueName: deleteCart
+    mail:
+      mailQueueName: sendMailQueue
+
+  redis:
+    item: 'com.ego.item::details:'
+    cartKey: 'cart:'
+  cookie:
+      tempCart: tempCart
+  passport:
+    loginUrl: http://localhost:8084/user/showLogin
